@@ -1,0 +1,14 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+@layer components{
+.h{font-family:var(--f-head),Impact,sans-serif;text-transform:uppercase;line-height:.95;letter-spacing:-.01em}
+.in{@apply w-full border border-white/25 bg-white/5 px-3 py-2 outline-none focus:border-white}
+.paper .in{@apply border-[#5e0a0d]/40 bg-white/60 text-[#2a0a0a] focus:border-[#a3201f]}
+}
+html{scroll-behavior:smooth;color-scheme:dark}
+body{background:#0a0d12;color:#fff}
+@keyframes up{from{opacity:0;transform:translateY(28px)}}
+@keyframes mq{to{transform:translateX(-50%)}}
+.up{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.mq{animation:mq 45s linear infinite}
+:focus-visible{outline:2px solid #f4ff00;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
